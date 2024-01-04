@@ -13,57 +13,60 @@
 nav{
   display: flex;
   background-color: #6f6af7;
-  width: 100%;
   align-items: center;
-  justify-content: space-around;
-  position: fixed;
+  justify-content: space-between;
+  position: sticky;
   top: 0;
   left: 0;
-  padding: 20px 50px;
+  padding: 1rem 1.5rem;
+  z-index: 1;
 }
 
 nav .logo{
   font-family: Delius Unicase;
+  font-size: 2rem;
   font-weight: var(--bold-font);
   text-align: left;
-  width: auto;
 }
 
-ul{
+.nav-menu{
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
 }
 
 ul li{
   list-style-type: none;
-  margin-right: 30px;
-  font-family: ;
+  margin-left: 2rem;
   font-weight: var(--normal-font);
 }
   
-nav a{
+a{
   text-decoration: none;
   color: var(--white);
   font-weight: var(--normal-font);
 }
   
+a:hover{
+  color: #ea2027;
+}
+
 .menu{
   display: flex;
   flex-direction: column;
+  justify-content: space-around;
   cursor: pointer;
   padding: 0;
-  width:fit-content
 }
   
 .menu .bar{
   padding: 0;
-  width: 30px;
+  width: 2rem;
   height: 3px;
   background-color: var(--white);
   border: none;
-  border-radius: 2px;
-  margin: 3px 0;
+  border-radius: 3px;
+  margin-top: 6px;
 }
 
 nav .search{
@@ -71,7 +74,7 @@ nav .search{
   align-items: center;
   background-color: var(--white);
   padding: 10px 20px;
-  border-radius: 63px;
+  border-radius: 6px;
 }
   
 nav input[type=text]{
@@ -81,8 +84,8 @@ nav input[type=text]{
   
 .side{
   top: 20%;
-  right: 10px;
-  position: fixed;
+  float: right;
+  position: sticky;
   z-index: 1;
 }
   
@@ -98,23 +101,22 @@ nav input[type=text]{
   background-color: var(--white);
   display: block;
   align-items: center;
+  justify-content: center;
   margin-bottom: 2px;
-  width: 40px;
-  height: 40px;
 }
 
 .icon{
   position: fixed;
-  bottom: 150px; /* Adjust the distance from the bottom as needed */
-  right: 50px; /* Adjust the distance from the right as needed */
-  width: 50px; /* Adjust the width of the icon */
-  height: 50px; /* Adjust the height of the icon */
-  background-color: var(--white); /* Adjust the background color */
-  border-radius: 50%; /* Make it round */
+  bottom: 150px; 
+  right: 50px;
+  width: 50px; 
+  height: 50px; 
+  background-color: var(--white); 
+  border-radius: 50%; 
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  box-shadow: 0px 0px 15px 0px #000000;
+  z-index: 1;
 }
 
 .icon img{
@@ -123,16 +125,15 @@ nav input[type=text]{
 }
 
 .container{
-  margin: 200px 0 0 100px;
+  margin: 2.5rem auto -6rem;
   max-width: 1300px;
-  width: 100%;
 }
 
 .top{
   display: flex;
   justify-content: space-between;
   max-width: 1300px;
-  max-height: 650px;;
+  max-height: 650px;
   width: 100%;
   height: 100%;
   padding: 0px;
@@ -147,7 +148,7 @@ nav input[type=text]{
 }
 
 .top .textarea{
-  margin-left: 100px;
+  margin-left: 50px;
   border: none;
   border-radius: 25px;
   width: 100%;
@@ -176,12 +177,12 @@ nav input[type=text]{
   align-items: center;
   justify-content: space-between;
   padding: 0;
-  width: 1300px;
+  width: 100%;
   margin: 50px 0;
 }
 
 .mid .new{
-  width: 50%;
+  width: 20%;
   height: 145.48px;
   margin: 30px;
   border-radius: 11px;
@@ -214,8 +215,6 @@ nav input[type=text]{
 .btm{
   display: flex;
   background-color: #483EFF;
-  width: 1300px;
-  height: 700px;
   border-radius: 21px;
   padding: 35px;
   margin: 50px 0;
@@ -224,9 +223,7 @@ nav input[type=text]{
 .btm .left{
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
-  max-height: 650px;
-  height: 100%;
+  justify-content: space-between;
 }
 
 .left button{
@@ -251,27 +248,20 @@ nav input[type=text]{
 }
 
 .btm .right{
-  width: 100%;
-  height: 100%;
   border-radius: 19px;
   background: #FFFFFF;
   padding: 100px;
-  width: 100%;
-  max-height: 650px;
-  height: 100%;
+
 }
 
 .btm .right > button{
-  max-width: 207px;
-  max-height: 78px;
-  height: 100%;
-  width: 100%;
+  width: 7rem;
+  height: 2.5rem;
   border-radius: 9px;
   background-color: #000000;
   color: var(--white);
   float: right;
   margin-top: 25px;
-  position: relative;
   cursor: pointer;
 }
 
@@ -280,7 +270,7 @@ table{
 }
 
 th{
-  text-align: center;
+  text-align: left;
   color: #04285A;
   font-family: Inter;
   font-size: 38px;
@@ -295,11 +285,13 @@ td{
   font-size: 28px;
   font-weight: 500;
   line-height: 33px;
-  width: 250px;
 }
 
 @media only screen and (max-width: 768px) {
-  /* ... Existing styles ... */
+
+  .nav-menu{
+    display: none;
+  }
 
   .container {
     margin: 20px;
@@ -307,6 +299,7 @@ td{
 
   .top, .mid, .btm {
     flex-direction: column;
+    margin-top: 4rem;
   }
 
   .top img {
@@ -342,7 +335,6 @@ td{
   .btm .left,
   .btm .right{
     width: 100%;
-    margin:
   }
 
   .right {
