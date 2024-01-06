@@ -287,7 +287,7 @@ td{
   line-height: 33px;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1000px) {
 
   .nav-menu{
     display: none;
@@ -335,10 +335,15 @@ td{
   .btm .left,
   .btm .right{
     width: 100%;
+    align-items: center;
   }
 
   .right {
     padding: 20px;
     width: 50%;
+  }
+
+  th, td{
+    font-size: 1.5rem;
   }
 }
