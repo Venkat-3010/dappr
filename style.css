@@ -329,18 +329,19 @@ td{
   }
 
   .mid .left > button{
-    width:50%;
+    width: 25;
   }
 
   .btm .left,
   .btm .right{
     width: 100%;
     align-items: center;
+    padding: 10px;
   }
 
-  .right {
-    padding: 20px;
-    width: 50%;
+  .left button {
+    width: 100%;
+    font-size: 1rem;
   }
 
   th, td{
